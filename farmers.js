@@ -1,4 +1,4 @@
-import {farmersData} from './data'
+import {farmersData} from './data.js'
 
 window.onload = function () {
     var url = document.location.href,
@@ -16,7 +16,6 @@ window.onload = function () {
             districts.forEach(district => {
                 if(district.Name === data['district']){
                     farmers = district.Farmers;
-                    found = 1;
                 }
             })
         }

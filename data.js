@@ -1,4 +1,4 @@
-const farmersData = [
+export const farmersData = [
     {
         'Name': 'Punjab',
         'Image': `https://diligentias.com/wp-content/uploads/2019/05/Punjab.jpg`,

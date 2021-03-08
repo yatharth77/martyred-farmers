@@ -1,4 +1,5 @@
-import {farmersData} from './data'
+import {farmersData} from './data.js'
+
 window.onload = function () {
     var url = document.location.href,
         params = url.split('?')[1].split('&'),

@@ -1,4 +1,4 @@
-import {farmersData} from './data'
+import {farmersData} from './data.js'
 
 farmersData.forEach(state => {
     var state_card = document.createElement('a');
