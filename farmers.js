@@ -63,7 +63,7 @@ window.onload = function () {
 function addDataToModal(data) {
     $('.modal-title').html(data['Name']+", "+data["Age"])
     var list = document.createElement('UL');
-    for (key in data){
+    for (let key in data){
         if(key === "Name" || key === "Age" || key === "Image")
             continue;
         var listItem = document.createElement('LI');
