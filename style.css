@@ -1,0 +1,41 @@
+#header {
+  background: url(https://static.toiimg.com/thumb/msid-79653835,width-1200,height-900,resizemode-4/.jpg) center center / cover no-repeat ;
+}
+
+#header-content {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.district {
+  display: none;
+}
+
+.farmer-img {
+  max-width:460px;
+  max-height:190px;
+  width: auto;
+  height: auto;
+}
+
+#about {
+  margin: 15px;
+}
+
+.district-card:hover, .state-card:hover, .farmer-card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-img {
+  opacity: 0.5;
+}
+
+.card-img:hover {
+  opacity: 1;
+  transition: 0.5s;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+     <section id="header" class="jumbotron text-center">
+      <div id="header-content">
+       <h1 class="display-3"><b>Swaraj India</b></h1>
+       <p class="lead"><b>List of Deaths in Farmers’ Protest at Delhi Border since 24 November 2020
+      </b></p>
+      <div class="tab" id="districts">
+        <a class="tablinks btn btn-primary active" onclick="selectTab('about')" id="about-btn">About Blog</a>
+        <a class="tablinks btn btn-primary" onclick="selectTab('states')" id="states-btn">Farmer Details</a>
+      </div>
+      </div>
+  </section>
+  
+  <!-- Tab content -->
+  <div id="about" class="tabcontent"  style="display: none;">
+    <h3 style="text-align: center;">About the blog</h3>
+    <p>
+      <h6>
+        This blog is created with the sole purpose of recording the deaths of all 
+        the farmers or supporters of Famers’ Protest 2020-2021 happening currently at 
+        the borders of Delhi, India. This is to remind everyone of the human cost of 
+        the protest lest one forgets what this fight is against. This is also to 
+        commemorate the participation of these martyrs towards a cause that is bigger 
+        than just farmers’ rights and is emerging as a movement for the rights of 
+        the entire humanity. I have been assisted by Harinder Happy (resource person) 
+        [IG @emptypocketofheart]  and Sajneet Mangat (data visualisation)  
+        [IG @womangat] since January 2021 in the maintenance and updating of this list. 
+        I will appreciate it if the readers can drop in any data related to 
+        deaths at Farmers' Protest that might be missing from this blog 
+        or point out erroneous data in the comments. 
+      </h6>
+      <span>
+        Note: The death data is not arranged according to the chronological order. 
+        By “Illness” I mean general illness and not covid as most of them have died 
+        in hospitals and none of newspaper sources report indicated covid.
+        <p>-----Anuroop</p>
+      </span>
+    </p>
+    <hr>
+    <h6>Total deaths as noted on 04/03/2021 = 271</h6>
+    <h6>Last update (11:35 PM) </h6>
+    <h6>#FarmersProtest </h6>
+    <h6>UPDATE:  A special portal has been created on <a href="https://atampargas.org/Home/Supportfarmers">here</a> 
+      to provide assistance to the families of the deceased through a funding trust and other activities. 
+      Do inform the families of these martyrs about it. Information sourced from Punjabi Tribune Newspaper:
+      <a href="https://epaper.punjabitribuneonline.com/c/58282210">here</a>
+    </h6>
+    <h6>UPDATE: BKU (Chaduni) has claimed to financially help the families of the deceased. 
+      If you know anyone from Haryana on this list, ask them to contact at 9896409460 (Jagdeep Singh Aulakh), 
+      Karnal District head. Check out following link for further information: 
+      <a href="https://timesofindia.indiatimes.com/city/chandigarh/11-farmers-from-haryana-died-during-protests-against-farm-laws/articleshow/80156490.cms ">here</a></h6>
+    <h5>LIST OF DEATHS BEFORE 24TH OF NOVEMBER 2020</h3>
+    <h6>12 Farmers have died by October itself according a report by Wire: the details of which can be followed through this link:
+    <a href="https://thewire.in/agriculture/farmers-punjab-protest-central-farm-laws">here</a>
+    We are coming up with a new list of deaths that took place before the 24th of November and visual mapping of the entire data.
+    Jai Singh Sandhu maintains a memorial page dedicated to these martyrs on Trolley Times and Ghadrwave website at 
+    <a href="https://www.trolleytimes.online/martyrs-list">here (trolleytimes)</a> and
+    <a href="https://ghadrwave.com/">here (ghadrwave)</a>
+    Check out the martyrs’ photos (including those not on the blog) dropbox link on Ghadrwave website : <a href="https://ghadrwave.com/">here</a></h6>
+  </div>
+
+  <div id="states" class="tabcontent states">
+    <section id="gallery">
+      <div class="container">
+        <div class="row" id="state-cards">
+           
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+<script type="module" src="index.js"></script>
+</html>
