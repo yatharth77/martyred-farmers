@@ -166,9 +166,4 @@ export const farmersData = [
             }]
         }]
     },
-    {
-        'Name': 'Haryana',
-        'Image': `https://haryanacmoffice.gov.in/themes/cmoharyana/images/haryana-map.png`,
-        'Districts': [],
-    }
 ]
