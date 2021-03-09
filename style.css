@@ -51,3 +51,7 @@
 #total-death {
   color: rgb(233, 27, 27)
 }
+
+#farmer-header, #district-header, #state-header {
+  text-align: center;
+}

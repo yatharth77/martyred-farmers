@@ -16,6 +16,7 @@ window.onload = function () {
             break;
         }
     }
+    document.getElementById('district-header').innerHTML = `List of farmers from ${data.state} state` 
     document.getElementById('district-cards').innerHTML = "";
     districts.forEach(district => {
         var district_card = document.createElement('a');

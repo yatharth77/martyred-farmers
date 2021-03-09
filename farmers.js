@@ -21,6 +21,8 @@ window.onload = function () {
         }
     }
 
+    document.getElementById('farmer-header').innerHTML = `List of farmers from ${data['district']} district`
+    document.getElementById('farmer-cards').innerHTML = ""; 
     farmers.forEach(farmer => {    
         var farmer_card = document.createElement('a');
         farmer_card.classList.add("col-lg-3", "mb-3", "farmer-card");
