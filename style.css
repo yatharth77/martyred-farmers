@@ -39,3 +39,15 @@
   opacity: 1;
   transition: 0.5s;
 }
+
+#note, .update {
+  color: brown;
+}
+
+#sub-note, #hash_tag {
+  color: blue;
+}
+
+#total-death {
+  color: rgb(233, 27, 27)
+}

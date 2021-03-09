@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="index.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -13,8 +14,10 @@
 <body>
      <section id="header" class="jumbotron text-center">
       <div id="header-content">
-       <h1 class="display-3"><b>Swaraj India</b></h1>
-       <p class="lead"><b>List of Deaths in Farmers’ Protest at Delhi Border since 24 November 2020
+       <h1 class="display-3"><b>Sanyukt Kisan Morcha</b></h1>
+       <p class="lead"><b>List of Deaths in Farmers’ Protest at Delhi Border since 24 November 2020 <br>
+        <span>This blog is dedicated to all the farmers who lost their lives while protesting for their rights. <br> 
+          We salute them and hope no more families have to lose their loved ones</span>
       </b></p>
       <div class="tab" id="districts">
         <a class="tablinks btn btn-primary active" onclick="selectTab('about')" id="about-btn">About Blog</a>
@@ -27,7 +30,7 @@
   <div id="about" class="tabcontent"  style="display: none;">
     <h3 style="text-align: center;">About the blog</h3>
     <p>
-      <h6>
+      <h6 id="note">
         This blog is created with the sole purpose of recording the deaths of all 
         the farmers or supporters of Famers’ Protest 2020-2021 happening currently at 
         the borders of Delhi, India. This is to remind everyone of the human cost of 
@@ -41,7 +44,7 @@
         deaths at Farmers' Protest that might be missing from this blog 
         or point out erroneous data in the comments. 
       </h6>
-      <span>
+      <span id="sub-note">
         Note: The death data is not arranged according to the chronological order. 
         By “Illness” I mean general illness and not covid as most of them have died 
         in hospitals and none of newspaper sources report indicated covid.
@@ -49,15 +52,14 @@
       </span>
     </p>
     <hr>
-    <h6>Total deaths as noted on 04/03/2021 = 271</h6>
-    <h6>Last update (11:35 PM) </h6>
-    <h6>#FarmersProtest </h6>
-    <h6>UPDATE:  A special portal has been created on <a href="https://atampargas.org/Home/Supportfarmers">here</a> 
+    <h6 id="total-death">Total deaths as noted on 04/03/2021 = 271</h6>
+    <h6 id="hash_tag">#FarmersProtest </h6>
+    <h6 class="update"><u>UPDATE:</u>  A special portal has been created on <a href="https://atampargas.org/Home/Supportfarmers">here</a> 
       to provide assistance to the families of the deceased through a funding trust and other activities. 
       Do inform the families of these martyrs about it. Information sourced from Punjabi Tribune Newspaper:
       <a href="https://epaper.punjabitribuneonline.com/c/58282210">here</a>
     </h6>
-    <h6>UPDATE: BKU (Chaduni) has claimed to financially help the families of the deceased. 
+    <h6 class="update"><u>UPDATE:</u> BKU (Chaduni) has claimed to financially help the families of the deceased. 
       If you know anyone from Haryana on this list, ask them to contact at 9896409460 (Jagdeep Singh Aulakh), 
       Karnal District head. Check out following link for further information: 
       <a href="https://timesofindia.indiatimes.com/city/chandigarh/11-farmers-from-haryana-died-during-protests-against-farm-laws/articleshow/80156490.cms ">here</a></h6>
@@ -74,12 +76,29 @@
   <div id="states" class="tabcontent states">
     <section id="gallery">
       <div class="container">
-        <div class="row" id="state-cards">
+        <div class="row justify-content-center" id="state-cards">
            
         </div>
       </div>
     </section>
   </div>
 </body>
-<script type="module" src="index.js"></script>
 </html>
+
+<script>
+  function selectTab(clickName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("active", "");
+    }
+    document.getElementById(clickName).style.display = "block";
+    document.getElementById(clickName+'-btn').classList.add("active");
+}
+</script>
