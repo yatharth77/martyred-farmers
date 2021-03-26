@@ -21,7 +21,9 @@ window.onload = function () {
         }
     }
 
-    document.getElementById('farmer-header').innerHTML = `List of farmers from ${data['district']} district`
+    document.getElementById('farmer-header').innerHTML = `List of farmers from ${data['district']} district/city, ${data['state']}`
+    document.getElementById('farmer-header').style.color = 'burlywood';
+    
     document.getElementById('farmer-cards').innerHTML = ""; 
     farmers.forEach(farmer => {    
         var farmer_card = document.createElement('a');
@@ -36,12 +38,12 @@ window.onload = function () {
         cardDiv.classList.add("card");
 
         var cardImg = document.createElement('IMG');
+        cardImg.classList.add("card-img");
         if(farmer.Image){
             cardImg.setAttribute("src", farmer.Image);
         }
         else{
             cardImg.setAttribute("src", "https://images.livemint.com/img/2020/12/03/600x338/20201202104L_1606909208417_1606909231144_1607010576096.jpg");
-            cardImg.style.opacity = "0.5";
         }
         // cardImg.setAttribute("width", "253");
         cardImg.setAttribute("height", "230");
@@ -51,7 +53,10 @@ window.onload = function () {
 
         var cardTitle = document.createElement("H5");
         cardTitle.classList.add("card-title");
-        cardTitle.innerHTML = farmer.Name + ", " + farmer.Age;
+        if(('Age' in farmer) && farmer.Age) 
+            cardTitle.innerHTML = farmer.Name + ", " + farmer.Age;
+        else
+            cardTitle.innerHTML = farmer.Name;
 
         cardBody.appendChild(cardTitle);
         cardDiv.appendChild(cardImg);

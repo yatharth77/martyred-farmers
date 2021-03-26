@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Sanyukt Kisan Morcha</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <script type="module" src="index.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
+<body style="background: black;">
      <section id="header" class="jumbotron text-center">
       <div id="header-content">
        <h1 class="display-3"><b>Sanyukt Kisan Morcha</b></h1>
@@ -24,11 +25,51 @@
         <a class="tablinks btn btn-primary" onclick="selectTab('states')" id="states-btn">Farmer Details</a>
       </div>
       </div>
+      <!-- Start of counter -->
+      <div class="container">
+        <div class="row">
+            <div class="four col-md-3">
+                <div class="counter-box colored"> <i class="fa fa-thumbs-o-up"></i> <span class="counter">114</span>
+                    <p>Days of protest</p>
+                </div>
+            </div>
+            <div class="four col-md-3">
+                <div class="counter-box"> <i class="fa fa-group"></i> <span class="counter">271</span>
+                    <p>Farmers martyred till date</p>
+                </div>
+            </div>
+            <div class="four col-md-3">
+                <div class="counter-box"> <i class="fa fa-shopping-cart"></i> <span class="counter">250000000</span>
+                    <p>Farmers protesting</p>
+                </div>
+            </div>
+            <div class="four col-md-3">
+                <div class="counter-box"> <i class="fa fa-user"></i> <span class="counter">11</span>
+                    <p>Farmer government meetings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('.counter').each(function () {
+          $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+          }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            }
+          });
+        });
+   </script>
+    <!-- End of counter -->
   </section>
   
   <!-- Tab content -->
   <div id="about" class="tabcontent"  style="display: none;">
-    <h3 style="text-align: center;">About the blog</h3>
+    <h3 style="text-align: center; color: burlywood;">About the blog</h3>
     <p>
       <h6 id="note">
         This blog is created with the sole purpose of recording the deaths of all 
@@ -63,6 +104,7 @@
       If you know anyone from Haryana on this list, ask them to contact at 9896409460 (Jagdeep Singh Aulakh), 
       Karnal District head. Check out following link for further information: 
       <a href="https://timesofindia.indiatimes.com/city/chandigarh/11-farmers-from-haryana-died-during-protests-against-farm-laws/articleshow/80156490.cms ">here</a></h6>
+    <div style="color: burlywood;">
     <h5>LIST OF DEATHS BEFORE 24TH OF NOVEMBER 2020</h3>
     <h6>12 Farmers have died by October itself according a report by Wire: the details of which can be followed through this link:
     <a href="https://thewire.in/agriculture/farmers-punjab-protest-central-farm-laws">here</a>
@@ -70,11 +112,13 @@
     Jai Singh Sandhu maintains a memorial page dedicated to these martyrs on Trolley Times and Ghadrwave website at 
     <a href="https://www.trolleytimes.online/martyrs-list">here (trolleytimes)</a> and
     <a href="https://ghadrwave.com/">here (ghadrwave)</a>
-    Check out the martyrs’ photos (including those not on the blog) dropbox link on Ghadrwave website : <a href="https://ghadrwave.com/">here</a></h6>
+    Check out the martyrs’ photos (including those not on the blog) dropbox link on Ghadrwave website : <a href="https://ghadrwave.com/">here</a></h6></div>
   </div>
 
   <div id="states" class="tabcontent states">
-    <h5 class="state-header" id="state-header">Click the state for further details</h5>
+    <hr style="background-color: burlywood;">
+    <h5 class="state-header" id="state-header" style="color: burlywood;">Click the state for further details</h5>
+    <hr style="background-color: burlywood;">
     <section id="gallery">
       <div class="container">
         <div class="row justify-content-center" id="state-cards">

@@ -17,6 +17,7 @@ window.onload = function () {
         }
     }
     document.getElementById('district-header').innerHTML = `List of farmers from ${data.state} state` 
+    document.getElementById('district-header').style.color = 'burlywood';
     document.getElementById('district-cards').innerHTML = "";
     districts.forEach(district => {
         var district_card = document.createElement('a');
@@ -27,11 +28,16 @@ window.onload = function () {
         var cardDiv = document.createElement('DIV');
         cardDiv.classList.add("card");
     
-        var cardImg = document.createElement('IMG');
-        cardImg.classList.add("card-img");
-        cardImg.setAttribute("src", "https://images.livemint.com/img/2020/12/03/600x338/20201202104L_1606909208417_1606909231144_1607010576096.jpg");
-        cardImg.setAttribute("width", "253");
-        cardImg.setAttribute("height", "230");
+        // var cardImg = document.createElement('IMG');
+        // cardImg.classList.add("card-img");
+        // if(district.Image){
+        //     cardImg.setAttribute("src", district.Image);
+        // }
+        // else{
+        //     cardImg.setAttribute("src", "https://images.livemint.com/img/2020/12/03/600x338/20201202104L_1606909208417_1606909231144_1607010576096.jpg");
+        // }
+        // cardImg.setAttribute("width", "253");
+        // cardImg.setAttribute("height", "230");
     
         var cardBody = document.createElement('DIV');
         cardBody.classList.add("card-body");
@@ -41,7 +47,7 @@ window.onload = function () {
         cardTitle.innerHTML = district.Name;
     
         cardBody.appendChild(cardTitle);
-        cardDiv.appendChild(cardImg);
+        // cardDiv.appendChild(cardImg);
         cardDiv.appendChild(cardBody);
     
         district_card.appendChild(cardDiv);
